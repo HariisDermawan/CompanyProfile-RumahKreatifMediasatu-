@@ -1,0 +1,673 @@
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .active-filter {
+            background: rgba(77, 145, 143, 0.12);
+            border-color: rgba(77, 145, 143, 0.35);
+        }
+
+.partner-section{
+  width: 100%;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.partner-container{
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.partner-title{
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111827;
+}
+
+.partner-marquee{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+}
+
+.partner-track{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: max-content;
+  animation: partnerScroll 18s linear infinite;
+}
+
+.partner-card{
+  flex: 0 0 auto;
+  width: 205px;
+  height: 100px;
+  background: white;
+  border-radius: 18px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.partner-card img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes partnerScroll{
+  0%{ transform: translateX(0); }
+  100%{ transform: translateX(-50%); } /* jalan ke kiri */
+}
+
+@media(max-width: 640px){
+  .partner-container{
+    max-width: 100%;
+    padding: 0 14px;
+  }
+
+  .partner-card{
+    width: 165px;
+    height: 85px;
+  }
+
+  .partner-track{
+  animation: partnerScroll 10s linear infinite;
+}
+
+}
+
+
+/* Mobile: tetap rapih */
+@media(max-width: 640px){
+  .partner-title{
+    font-size: 22px;
+  }
+
+  .partner-card{
+    width: 130px;
+    height: 75px;
+    border-radius: 16px;
+    padding: 12px;
+  }
+
+  .partner-track{
+    gap: 14px;
+    animation-duration: 16s;
+  }
+}
+
+
+  /* NAVBAR */
+  .navbar {
+    height: 85px;
+    border-radius: 30px;
+    margin: 20px 15px 0 15px;
+    width: calc(100% - 30px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .hero-section {
+    min-height: 100vh;
+    margin-top: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* HAMBURGER */
+  .hamburger-line {
+    transition: all 0.3s ease-in-out;
+    height: 2.5px;
+    background-color: #111827;
+    border-radius: 2px;
+  }
+
+  .hamburger-active > span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+    width: 24px;
+  }
+
+  .hamburger-active > span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  .hamburger-active > span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+    width: 24px;
+  }
+
+  /* MOBILE MENU */
+  .mobile-menu {
+    position: fixed;
+    top: 85px;
+    left: 15px;
+    right: 15px;
+    background: white;
+    z-index: 40;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .mobile-menu-content {
+    padding: 20px 0;
+  }
+
+  /* CARD HOVER */
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* TEAM CAROUSEL */
+  .team-carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .team-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .team-card-new {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    flex: 0 0 auto;
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .team-card-new {
+      width: calc(50% - 30px);
+      margin: 0 15px;
+    }
+
+    .team-carousel-wrapper,
+    .team-carousel-track {
+      padding: 0 15px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .team-card-new {
+      width: calc(33.333% - 40px);
+      margin: 0 20px;
+    }
+
+    .navbar {
+      margin: 20px auto 0 auto;
+      width: calc(100% - 80px);
+      max-width: 1400px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .team-card-new:hover {
+    transform: translateY(-15px);
+  box-shadow: 0 25px 50px -12px rgba(54, 192, 178, 0.25); /* rgba dari #36c0b2 */
+  }
+
+  .team-card-new::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+  background: linear-gradient(90deg, #36c0b2 0%, #36c0b2 100%);
+    z-index: 1;
+  }
+
+  .team-img-container {
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+    width: 100%;
+  }
+
+  .team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .team-card-new:hover .team-img {
+    transform: scale(1.05);
+  }
+
+  .team-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    padding: 20px;
+    color: white;
+  }
+
+  .team-social {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .team-card-new:hover .team-social {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  color: #36c0b2;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+
+  .social-icon:hover {
+  background: #36c0b2;
+    color: white;
+    transform: scale(1.1);
+  }
+
+  .team-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  background: linear-gradient(90deg, #36c0b2 0%, #36c0b2 100%);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 2;
+  }
+
+  /* TEAM ARROW */
+  .team-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s ease;
+  }
+
+  .team-arrow:hover {
+    background: #36c0b2;
+    color: white;
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+  }
+
+  .team-arrow-left {
+    left: 5px;
+  }
+
+  .team-arrow-right {
+    right: 5px;
+  }
+
+  @media (min-width: 768px) {
+    .team-arrow-left {
+      left: -22px;
+    }
+
+    .team-arrow-right {
+      right: -22px;
+    }
+  }
+
+  /* DOTS */
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #E5E7EB;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-dot.active {
+  background: #36c0b2;
+    transform: scale(1.2);
+  }
+
+  /* VIDEO */
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* GRADIENT */
+  .gradient-bg {
+    background: linear-gradient(135deg, #36c0b2 0%, #36c0b2 100%);
+  }
+
+  .gradient-text {
+  background: linear-gradient(90deg, #36c0b2 0%, #36c0b2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* GLASS */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F1F5F9;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #36c0b2;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #36c0b2;
+  }
+
+  /* MODAL */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-container {
+    background: white;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+  }
+
+  .modal-overlay.active .modal-container {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .modal-header {
+    padding: 24px 32px;
+    border-bottom: 1px solid #E5E7EB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .modal-close {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #F3F4F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .modal-close:hover {
+    background: #36c0b2;
+    color: white;
+  }
+
+  .modal-content {
+    padding: 32px;
+  }
+
+  .modal-footer {
+    padding: 24px 32px;
+    border-top: 1px solid #E5E7EB;
+    text-align: right;
+  }
+
+  /* Badge untuk tim yang bisa diklik */
+  .team-click-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(90deg, #F59E0B 0%, #F97316 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    z-index: 5;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.05);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Animasi khusus untuk AOS delay */
+  [data-aos-delay="100"] {
+    transition-delay: 100ms;
+  }
+
+  [data-aos-delay="200"] {
+    transition-delay: 200ms;
+  }
+
+  [data-aos-delay="300"] {
+    transition-delay: 300ms;
+  }
+
+  [data-aos-delay="400"] {
+    transition-delay: 400ms;
+  }
+
+  [data-aos-delay="500"] {
+    transition-delay: 500ms;
+  }
+
+  /* FIX: Perbaiki padding untuk mobile */
+  @media (max-width: 640px) {
+    .px-6 {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    .hero-section .container {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    .team-carousel-wrapper {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    .team-card-new {
+      margin-left: 5px;
+      margin-right: 5px;
+      width: calc(100% - 10px);
+    }
+
+    h1.text-5xl,
+    h1.text-6xl,
+    h1.text-7xl {
+      font-size: 2.5rem !important;
+      line-height: 1.2 !important;
+    }
+
+    .text-4xl,
+    .text-3xl {
+      font-size: 1.875rem !important;
+    }
+
+    .px-10 {
+      padding-left: 1.5rem !important;
+      padding-right: 1.5rem !important;
+    }
+
+    .py-4 {
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+    }
+
+    /* NAVBAR MOBILE: Radius dan posisi */
+    .navbar {
+      margin: 15px 10px 0 10px;
+      width: calc(100% - 20px);
+      height: 80px;
+    }
+
+    .hero-section {
+      margin-top: 0;
+      min-height: 100vh;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero-section h1 {
+      word-break: break-word;
+    }
+  }
+
+  /* Responsif untuk tablet */
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .navbar {
+      margin: 15px 20px 0 20px;
+      width: calc(100% - 40px);
+    }
+  }
