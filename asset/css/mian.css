@@ -25,112 +25,122 @@
     width: 100%;
     padding: 60px 0;
     overflow: hidden;
-  }
+}
 
-  .partner-container {
+.partner-container {
     width: 100%;
     max-width: 1450px;
     margin: 0 auto;
     padding: 0 20px;
-  }
+}
 
-  .partner-title {
+.partner-title {
     font-size: 28px;
     font-weight: 800;
     text-align: center;
     margin-bottom: 30px;
     color: #111827;
-  }
+}
 
-  .partner-marquee {
+.partner-marquee {
     width: 100%;
     overflow: hidden;
     position: relative;
     padding: 10px 0;
-  }
+}
 
-  .partner-track {
+/* Baris pertama (marquee kiri) */
+.partner-marquee:first-of-type .partner-track {
     display: flex;
-    align-items: center;
     gap: 24px;
     width: max-content;
     animation: partnerScroll 18s linear infinite;
-  }
+}
 
-  .partner-card {
+/* Baris kedua (marquee kanan) */
+.partner-marquee:last-of-type {
+    margin-top: 30px; /* jarak bawah supaya tidak dempet partner 1 */
+}
+
+.partner-marquee:last-of-type .partner-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    animation: partnerScrollReverse 18s linear infinite;
+}
+
+.partner-card {
     flex: 0 0 auto;
     width: 205px;
     height: 100px;
     background: white;
     border-radius: 18px;
-
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 16px;
-  }
+}
 
-  .partner-card img {
-    max-width: 100%;
-    max-height: 100%;
+.partner-card img {
+    max-height: 120px;
+    width: auto;
     object-fit: contain;
-    display: block;
-  }
+}
 
-  @keyframes partnerScroll {
+/* Animasi marquee ke kiri */
+@keyframes partnerScroll {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-
     100% {
-      transform: translateX(-50%);
+        transform: translateX(-50%);
     }
+}
 
-    /* jalan ke kiri */
-  }
+/* Animasi marquee ke kanan */
+@keyframes partnerScrollReverse {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
-  @media(max-width: 640px) {
+/* Responsive mobile */
+@media(max-width: 640px) {
     .partner-container {
-      max-width: 100%;
-      padding: 0 14px;
+        max-width: 100%;
+        padding: 0 14px;
     }
 
-    .partner-card {
-      width: 165px;
-      height: 85px;
-    }
-
-    .partner-track {
-      animation: partnerScroll 10s linear infinite;
-    }
-
-  }
-
-
-  /* Mobile: tetap rapih */
-  @media(max-width: 640px) {
     .partner-title {
-      font-size: 22px;
+        font-size: 22px;
     }
 
     .partner-card {
-      width: 130px;
-      height: 75px;
-      border-radius: 16px;
-      padding: 12px;
+        width: 130px;
+        height: 75px;
+        border-radius: 16px;
+        padding: 12px;
     }
 
     .partner-track {
-      gap: 14px;
-      animation-duration: 16s;
+        gap: 14px;
+        animation-duration: 16s;
     }
-  }
+
+    .partner-marquee:last-of-type .partner-track {
+        animation-duration: 16s;
+    }
+}
+
 
 
   /* NAVBAR */
   .navbar {
     height: 85px;
-    border-radius: 30px;
+    border-radius: 20px;
     margin: 20px 15px 0 15px;
     width: calc(100% - 30px);
     position: fixed;
@@ -138,7 +148,7 @@
     left: 0;
     right: 0;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgb(255, 254, 254);
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);

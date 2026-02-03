@@ -146,7 +146,6 @@ const teamMembers = {
         position: 'Web Developer',
         experience: '5+ Tahun Pengalaman',
         email: 'rumahkreatifmediasatu@gmail.com',
-        phone: '+62 816-1125-676',
         description: 'Memimpin tim kreatif dengan pengalaman lebih dari 10 tahun di industri media. Sebelum bergabung dengan MediaSphere, Alex bekerja sebagai Creative Director di agensi periklanan ternama di New York dan London.',
         image: 'asset/tim/jhon.jpeg',
         skills: ['Creative Strategy', 'Brand Storytelling', 'Content Development', 'Team Leadership', 'Client Relations'],
@@ -161,39 +160,35 @@ const teamMembers = {
         position: 'Web Developer',
         experience: '6+ Proyek',
         email: 'harisdermawaan.id@gmail.com',
-        phone: '+62 812 3456 7892',
-        description: 'Spesialis dalam produksi konten video dengan fokus pada storytelling yang powerful. Telah memproduksi lebih dari 50 proyek video untuk berbagai klien dari industri fashion hingga teknologi.',
-        image: 'asset/tim/me.jpeg',
+        description: 'Fokus pada pembuatan solusi digital yang fungsional dan intuitif. Telah menyelesaikan banyak proyek software untuk klien di berbagai industri, termasuk company profile dan teknologi.',
+        image: 'asset/tim/saa.png',
         skills: ['Laravel', 'ApiRest', 'php', 'Html', 'css', 'java script', 'tailwindcss', 'figma design'],
         achievements: [
-            'Memproduksi 50+ proyek video sukses',
-            'Meningkatkan ROI klien rata-rata 200%',
-            'Mengelola tim produksi hingga 20 orang'
+            'Menyelesaikan lebih dari 50 proyek website dengan standar kualitas tinggi.',
+            'Menghadirkan pengalaman pengguna yang mulus dan responsif untuk berbagai platform.',
+            'Bekerja sama dengan tim kreatif untuk menghadirkan solusi digital yang inovatif dan fungsional.'
         ]
     },
     3: {
-        name: 'No name',
-        position: 'Motion Designer',
-        experience: 'Editor & Motion Designer',
-        email: 'michael@mediasphere.com',
-        phone: '+62 812 3456 7893',
-        description: 'Ahli dalam editing video dan motion graphics dengan kemampuan teknis yang luar biasa. Berpengalaman dengan berbagai software profesional seperti Adobe After Effects, Premiere Pro, dan Cinema 4D.',
-        image: '#',
-        skills: ['Video Editing', 'Motion Graphics', 'Visual Effects', '3D Animation', 'Color Grading'],
+        name: 'Muhammad Fadly',
+        position: 'Videografer',
+        experience: 'Videografer',
+        email: 'adlyasdki@gmail.com',
+        description: 'videografi dan editing video dengan kemampuan teknis yang luar biasa. Terampil menggunakan berbagai software profesional untuk menghasilkan konten visual berkualitas tinggi',
+        image: 'asset/tim/tegay.jpeg',
+        skills: ['Video Editing', 'Motion Graphics', 'Visual Effects',],
         achievements: [
             'Bekerja pada 5 proyek yang memenangkan penghargaan',
             'Mengembangkan template motion graphics yang digunakan tim',
-            'Melatih 8 junior motion designer'
         ]
     },
     4: {
-        name: 'No Name',
-        position: 'Manajer Media Sosial',
-        experience: 'Strategi Media Sosial',
-        email: 'lisa@mediasphere.com',
-        phone: '+62 812 3456 7894',
-        description: 'Mengelola strategi media sosial dan engagement dengan audiens di berbagai platform. Meningkatkan engagement hingga 300% untuk beberapa klien dengan konten yang relevan dan interaktif.',
-        image: '#',
+        name: 'Muhammad Fahri Ramadhan',
+        position: 'Videographer & Graphic Designer',
+        experience: 'Videographer & Graphic Designer',
+        email: 'mochfahriramadhanie@gmail.com',
+        description: 'berspesialisasi dalam mengubah ide menjadi visual yang berdampak, baik itu untuk branding, tata letak, atau konten digital. Dengan pikiran yang ingin tahu dan kecintaan pada tren visual, saya terus mencari cara baru untuk berkomunikasi melalui desain.',
+        image: 'asset/tim/fahri.jpeg',
         skills: ['Social Media Strategy', 'Content Planning', 'Community Management', 'Analytics', 'Influencer Marketing'],
         achievements: [
             'Meningkatkan engagement hingga 300%',
@@ -205,8 +200,7 @@ const teamMembers = {
         name: 'No Name',
         position: 'Sound Engineer',
         experience: 'Audio Specialist',
-        email: 'david@mediasphere.com',
-        phone: '+62 812 3456 7895',
+        email: '#',
         description: 'Spesialis audio dengan pengalaman 8 tahun di industri rekaman. Menguasai teknik mixing dan mastering untuk berbagai genre musik. Bekerja dengan berbagai artis dan label musik ternama.',
         image: '#',
         skills: ['Audio Mixing', 'Mastering', 'Sound Design', 'Foley Recording', 'Audio Restoration'],
@@ -220,8 +214,7 @@ const teamMembers = {
         name: 'No Name',
         position: 'Content Strategist',
         experience: 'Strategi Konten',
-        email: 'emma@mediasphere.com',
-        phone: '+62 812 3456 7896',
+        email: '#',
         description: 'Mengembangkan strategi konten untuk berbagai platform media. Berpengalaman dalam penelitian pasar dan analisis audiens. Membantu klien mengembangkan voice dan tone brand yang konsisten.',
         image: '#',
         skills: ['Content Strategy', 'Market Research', 'Audience Analysis', 'Brand Voice Development', 'Content Calendar'],
@@ -255,18 +248,14 @@ function showTeamModal(teamId) {
                                 <i class="fas fa-envelope mr-2 sm:mr-3"></i>
                                 <span>${member.email}</span>
                             </div>
-                            
-                            <div class="flex items-center text-gray-600 text-sm sm:text-base">
-                                <i class="fas fa-phone mr-2 sm:mr-3"></i>
-                                <span>${member.phone}</span>
-                            </div>
+                        
                             
                             <div class="flex space-x-3 sm:space-x-4">
                                 <a href="#" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
                                     <i class="fab fa-linkedin-in text-xs sm:text-sm"></i>
                                 </a>
                                 <a href="#" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
-                                    <i class="fab fa-twitter text-xs sm:text-sm"></i>
+                                    <i class="fab fa-tiktok text-xs sm:text-sm"></i>
                                 </a>
                                 <a href="#" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
                                     <i class="fab fa-instagram text-xs sm:text-sm"></i>
